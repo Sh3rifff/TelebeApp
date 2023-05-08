@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/emptyFragment"
+        android:icon="@drawable/ic_empty"
+        android:title="@string/empty" />
+
+    <item
+        android:id="@+id/recyclerFragment"
+        android:icon="@drawable/ic_recycler"
+        android:title="@string/recycler" />
+
+    <item
+        android:id="@+id/newsFragment"
+        android:icon="@drawable/ic_news"
+        android:title="@string/news" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_news"
+        android:title="@string/profile" />
+
+</menu>

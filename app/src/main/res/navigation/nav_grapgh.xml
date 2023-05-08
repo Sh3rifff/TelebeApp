@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grapgh"
+    app:startDestination="@id/recyclerFragment">
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="az.sharif.maintask.view.main.fragments.QuizFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/recyclerFragment"
+        android:name="az.sharif.maintask.view.main.fragments.ClubsFragment"
+        android:label="fragment_recycler"
+        tools:layout="@layout/fragment_clubs" >
+        <action
+            android:id="@+id/recycler_to_news"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/recycler_to_empty"
+            app:destination="@id/emptyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emptyFragment"
+        android:name="az.sharif.maintask.view.main.fragments.HomeFragment"
+        android:label="fragment_empty"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/empty_to_recycler"
+            app:destination="@id/recyclerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="az.sharif.maintask.view.main.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
