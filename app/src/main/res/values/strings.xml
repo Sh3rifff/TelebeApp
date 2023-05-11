@@ -1,11 +1,27 @@
 <resources>
     <string name="app_name">TelebeApp</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="empty">Empty</string>
-    <string name="recycler">Recycler</string>
-    <string name="news">News</string>
+    <string name="home">Home</string>
+    <string name="clubs">Clubs</string>
+    <string name="quiz">Quiz</string>
     <string name="item">Item</string>
     <string name="profile">Profile</string>
     <string name="random">Random</string>
     <string name="todo">TODO</string>
+    <string name="welcome_back_you_ve_been_missed">Welcome back.You\'ve been missed!</string>
+    <string name="lets_sign_you_in">Lets sign you in.</string>
+    <string name="phone_or_email">Phone,email or username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="sign_in">Sign In</string>
+    <string name="account">Do you have an account? </string>
+    <string name="register">Register</string>
+    <string name="step1">Step 1</string>
+    <string name="step2">Step 2</string>
+    <string name="step3">Step 3</string>
+    <string name="finish">Finish</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="select_your_hobbies">Choose Your Hobbies</string>
 </resources>

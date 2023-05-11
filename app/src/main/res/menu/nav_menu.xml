@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/emptyFragment"
-        android:icon="@drawable/ic_empty"
-        android:title="@string/empty" />
+        android:icon="@drawable/child_selector"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/recyclerFragment"
-        android:icon="@drawable/ic_recycler"
-        android:title="@string/recycler" />
+        android:icon="@drawable/child_selector2"
+        android:title="@string/clubs" />
 
     <item
         android:id="@+id/newsFragment"
-        android:icon="@drawable/ic_news"
-        android:title="@string/news" />
+        android:icon="@drawable/child_selector3"
+        android:title="@string/quiz" />
 
     <item
         android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_news"
+        android:icon="@drawable/child_selector4"
         android:title="@string/profile" />
 
 </menu>
