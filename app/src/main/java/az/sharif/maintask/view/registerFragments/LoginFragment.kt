@@ -1,4 +1,4 @@
-package az.sharif.maintask.view
+package az.sharif.maintask.view.registerFragments
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,38 +1,32 @@
 package az.sharif.maintask.view
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getColorStateList
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.fragment.app.viewModels
 import az.sharif.maintask.R
-import az.sharif.maintask.databinding.FragmentRegister3Binding
+import az.sharif.maintask.adapter.ClubRecyclerAdapter
+import az.sharif.maintask.databinding.FragmentRealClubBinding
 import az.sharif.maintask.model.HobbiesModel
-import az.sharif.maintask.view.activities.MainActivity
+import az.sharif.maintask.viewmodel.RecyclerViewModel
 import com.google.android.material.chip.Chip
 
 @Suppress("DEPRECATION")
-class RegisterFragment3 : Fragment(R.layout.fragment_register3) {
+class RealClubFragment : Fragment(R.layout.fragment_real_club) {
 
-    private lateinit var binding: FragmentRegister3Binding
-    private lateinit var navController: NavController
+    private lateinit var binding: FragmentRealClubBinding
+    private val viewModel: RecyclerViewModel by viewModels()
+    private val recyclerAdapter = ClubRecyclerAdapter(arrayListOf())
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentRegister3Binding.bind(view)
-        navController = Navigation.findNavController(view)
+        binding = FragmentRealClubBinding.bind(view)
 
-        binding.materialButton.setOnClickListener {
-            navController.popBackStack()
-        }
-
-        binding.materialButton3.setOnClickListener {
-
-        }
+        viewModel.refreshData()
+        binding.recyclerView.adapter = recyclerAdapter
+        observeData()
 
         addHobbies()
         filterChips()
@@ -65,7 +59,7 @@ class RegisterFragment3 : Fragment(R.layout.fragment_register3) {
         data.forEach {
             creteChips(it.hobbies)
         }
-        binding.materialButton3.setOnClickListener {
+        binding.searchImage.setOnClickListener {
             binding.chipGroup.checkedChipIds.forEach {
                 binding.chipGroup.findViewById<Chip>(it).text
 
@@ -75,8 +69,6 @@ class RegisterFragment3 : Fragment(R.layout.fragment_register3) {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent)
         }
     }
 
@@ -99,10 +91,18 @@ class RegisterFragment3 : Fragment(R.layout.fragment_register3) {
     private fun filterChips() {
         binding.chipGroup.setOnCheckedChangeListener { group, checkedId ->
             val chip: Chip? = group.findViewById(checkedId)
-            chip?.chipBackgroundColor = getColorStateList(
+            chip?.chipBackgroundColor = ContextCompat.getColorStateList(
                 requireContext(), R.color.purple_200
             )
         }
     }
 
+    private fun observeData() {
+        viewModel.recyclers.observe(viewLifecycleOwner) { recycler ->
+            recycler?.let {
+                binding.recyclerView.visibility = View.VISIBLE
+                recyclerAdapter.updateRecyclerList(recycler)
+            }
+        }
+    }
 }

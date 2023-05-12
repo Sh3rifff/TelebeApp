@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="az.sharif.maintask.view.LoginFragment"
+        android:name="az.sharif.maintask.view.registerFragments.LoginFragment"
         android:label="LoginFragment">
         <action
             android:id="@+id/login_to_register"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="az.sharif.maintask.view.RegisterFragment1"
+        android:name="az.sharif.maintask.view.registerFragments.RegisterFragment1"
         android:label="RegisterFragment" >
         <action
             android:id="@+id/action_registerFragment_to_registerFragment2"
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment2"
-        android:name="az.sharif.maintask.view.RegisterFragment2"
+        android:name="az.sharif.maintask.view.registerFragments.RegisterFragment2"
         android:label="RegisterFragment2" >
         <action
             android:id="@+id/action_registerFragment2_to_registerFragment32"
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment32"
-        android:name="az.sharif.maintask.view.RegisterFragment3"
+        android:name="az.sharif.maintask.view.registerFragments.RegisterFragment3"
         android:label="RegisterFragment3" >
         <action
             android:id="@+id/action_registerFragment32_to_registerFragment2"

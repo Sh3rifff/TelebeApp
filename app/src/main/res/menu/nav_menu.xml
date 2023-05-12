@@ -7,7 +7,7 @@
         android:title="@string/home" />
 
     <item
-        android:id="@+id/recyclerFragment"
+        android:id="@+id/clubFragment"
         android:icon="@drawable/child_selector2"
         android:title="@string/clubs" />
 

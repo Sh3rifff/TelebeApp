@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/acme</item>
+        <item>@font/alegreya_sans_sc</item>
+        <item>@font/alegreya_sans_sc_bold</item>
+        <item>@font/archivo</item>
+        <item>@font/baloo_tammudu_2</item>
+        <item>@font/candal</item>
+        <item>@font/sarala</item>
+        <item>@font/solway_light</item>
+    </array>
+</resources>

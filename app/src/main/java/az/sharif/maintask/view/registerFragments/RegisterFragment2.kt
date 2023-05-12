@@ -1,4 +1,4 @@
-package az.sharif.maintask.view
+package az.sharif.maintask.view.registerFragments
 
 import android.os.Bundle
 import android.view.View
@@ -55,7 +55,6 @@ class RegisterFragment2 : Fragment(R.layout.fragment_register2) {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
             }
 
         }
@@ -65,7 +64,6 @@ class RegisterFragment2 : Fragment(R.layout.fragment_register2) {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
             }
 
         }
@@ -75,7 +73,6 @@ class RegisterFragment2 : Fragment(R.layout.fragment_register2) {
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
             }
 
         }

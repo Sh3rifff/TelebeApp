@@ -4,7 +4,8 @@
     <string name="home">Home</string>
     <string name="clubs">Clubs</string>
     <string name="quiz">Quiz</string>
-    <string name="item">Item</string>
+    <string name="android">Android Development</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</string>
     <string name="profile">Profile</string>
     <string name="random">Random</string>
     <string name="todo">TODO</string>
@@ -24,4 +25,14 @@
     <string name="finish">Finish</string>
     <string name="hobbies">Hobbies</string>
     <string name="select_your_hobbies">Choose Your Hobbies</string>
+    <string name="sharif">Hello,Sharif</string>
+    <string name="lets">Let\'s find your Club</string>
+    <string name="search">Search</string>
+    <string name="club">Club</string>
+    <string name="_4">4</string>
+    <string name="sharif_shiraliyev">Sharif Shiraliyev</string>
+    <string name="dunen_18_00">Dunen, 18:00</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+    <string name="send">Send</string>
 </resources>
