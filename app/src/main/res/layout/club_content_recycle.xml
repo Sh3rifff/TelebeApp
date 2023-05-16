@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="2dp"
     android:layout_marginBottom="2dp"
-    android:background="@color/background"
+    android:background="@color/background_low"
     android:padding="14dp">
 
     <androidx.cardview.widget.CardView
@@ -98,7 +98,7 @@
 
         <TextView
             android:id="@+id/likeButton"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:drawablePadding="4dp"
@@ -106,16 +106,15 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:drawableStartCompat="@drawable/baseline_free"
-            app:drawableTint="@color/white"
+            app:drawableStartCompat="@drawable/ilke"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/commentButton"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/commentButton"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:drawablePadding="4dp"
@@ -123,7 +122,7 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:drawableStartCompat="@drawable/baseline_comment"
+            app:drawableStartCompat="@drawable/comet"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/sendButton"
             app:layout_constraintStart_toEndOf="@id/likeButton"
@@ -131,19 +130,17 @@
 
         <TextView
             android:id="@+id/sendButton"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
             android:drawablePadding="4dp"
             android:text="@string/send"
             android:textColor="@color/white"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:drawableStartCompat="@drawable/baseline_send"
+            app:drawableStartCompat="@drawable/shared"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/commentButton"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

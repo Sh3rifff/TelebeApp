@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import az.sharif.maintask.databinding.RecyclerviewItemBinding
+import az.sharif.maintask.databinding.EventLayoutBinding
 import az.sharif.maintask.model.RecyclerModel
 
 class EventRecyclerAdapter(private var recyclerList: List<RecyclerModel>) :
@@ -15,7 +15,7 @@ class EventRecyclerAdapter(private var recyclerList: List<RecyclerModel>) :
         viewType: Int
     ): ViewHolder {
         val binding =
-            RecyclerviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            EventLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
@@ -23,11 +23,11 @@ class EventRecyclerAdapter(private var recyclerList: List<RecyclerModel>) :
     override fun getItemCount(): Int = recyclerList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.binding.itemName.text = recyclerList[position].name
+        holder.binding.eventName.text = recyclerList[position].name
         holder.binding.imageView.setImageResource(recyclerList[position].image)
     }
 
-    class ViewHolder(val binding: RecyclerviewItemBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: EventLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
     @SuppressLint("NotifyDataSetChanged")
     fun updateRecyclerList(newRecyclerList: List<RecyclerModel>) {

@@ -10,6 +10,7 @@
     <color name="gray">#A8A8A8</color>
     <color name="red">#7E0000</color>
     <color name="background">#191720</color>
+    <color name="background_low">#302E36</color>
     <color name="spinner_text_color">#CC0000</color>
     <color name="blur">#90caf9</color>
 </resources>

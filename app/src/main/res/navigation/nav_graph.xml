@@ -6,10 +6,14 @@
     app:startDestination="@id/clubFragment">
 
     <fragment
-        android:id="@+id/newsFragment"
+        android:id="@+id/quizFragment"
         android:name="az.sharif.maintask.view.main.fragments.QuizFragment"
         android:label="fragment_news"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/quiz_to_opening"
+            app:destination="@id/quizOpeningFragment" />
+    </fragment>
     <fragment
         android:id="@+id/clubFragment"
         android:name="az.sharif.maintask.view.main.fragments.ClubsFragment"
@@ -20,7 +24,7 @@
             app:destination="@id/simpleClubFragment" />
     </fragment>
     <fragment
-        android:id="@+id/emptyFragment"
+        android:id="@+id/mainFragment"
         android:name="az.sharif.maintask.view.main.fragments.HomeFragment"
         android:label="fragment_empty"
         tools:layout="@layout/fragment_home" />
@@ -46,4 +50,17 @@
         android:name="az.sharif.maintask.view.SimpleClubFragment"
         android:label="fragment_simple_club"
         tools:layout="@layout/fragment_simple_club" />
+    <fragment
+        android:id="@+id/quizOpeningFragment"
+        android:name="az.sharif.maintask.view.QuizOpeningFragment"
+        android:label="QuizOpeningFragment" >
+        <action
+            android:id="@+id/open_to_real"
+            app:destination="@id/realExamFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/realExamFragment"
+        android:name="az.sharif.maintask.view.RealExamFragment"
+        android:label="fragment_real_exam"
+        tools:layout="@layout/fragment_real_exam" />
 </navigation>

@@ -33,7 +33,18 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin" />
+                app:layout_collapseMode="pin"
+                app:title="@string/android">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/back_image"
+                    android:textColor="@color/white"
+                    app:tint="@color/white" />
+
+            </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -50,11 +61,131 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/about_android"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/memberCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/_255"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/member"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/memberCount"
+                    app:layout_constraintTop_toBottomOf="@id/description" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/joinButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/join"
+                    android:textSize="14sp"
+                    app:backgroundTint="#00FFA5"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/memberCount" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/clubProfile"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/music"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/todo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/viewSupporter"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
+                    app:layout_constraintBottom_toBottomOf="@id/imageProfile"
+                    app:layout_constraintStart_toEndOf="@id/imageProfile"
+                    app:layout_constraintTop_toTopOf="@id/imageProfile" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/write_sth"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/viewSupporter"
+                    app:layout_constraintStart_toEndOf="@id/viewSupporter" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@color/gray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageProfile" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/clubsRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
+                android:padding="20dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
         </LinearLayout>
